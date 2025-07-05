@@ -1,0 +1,124 @@
+@model CartViewModel
+
+@{
+    ViewData["Title"] = "Sepetim";
+}
+
+<section class="container my-5">
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold text-primary d-flex justify-content-center align-items-center gap-2">
+            <i class="bi bi-cart-check-fill"></i> Sepetim
+        </h1>
+        <p class="text-muted fs-5">Seçtiğin ürünleri aşağıda görebilirsin.</p>
+    </div>
+
+    <div class="row g-5 justify-content-center">
+        <!-- Sepet Ürün Listesi -->
+        <div class="col-lg-8">
+            <div class="table-responsive shadow-sm rounded-4 p-4 bg-white">
+
+                @if (Model.CartLines.Any())
+                {
+                    <table class="table table-hover align-middle text-center">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Görsel</th>
+                                <th>Ürün</th>
+                                <th>Fiyat</th>
+                                <th>Adet</th>
+                                <th>Toplam</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.CartLines)
+                            {
+                                <tr>
+                                    <td>
+                                        <img src="/Img/Products/@item.Product.Image" alt="@item.Product.Name"
+                                            class="rounded-3 shadow-sm" style="height: 70px; width: 70px; object-fit: cover;" />
+                                    </td>
+                                    <td>
+                                        <a class="text-decoration-none fw-semibold text-dark"
+                                            href="/Products/Details/@item.Product.Id">
+                                            @item.Product.Name
+                                        </a>
+                                    </td>
+                                    <td class="fw-bold text-success">
+                                        @item.Product.Price.ToString("c")
+                                    </td>
+                                    <td class="fw-semibold">
+                                        @item.Quantity
+                                    </td>
+                                    <td class="fw-semibold">
+                                        @((item.Quantity * item.Product.Price).ToString("c"))
+                                    </td>
+                                    <td>
+                                        <form asp-action="Remove" asp-controller="Cart">
+                                            <input type="hidden" name="ProductId" value="@item.Product.Id" />
+                                            <button class="btn btn-outline-danger btn-sm" type="submit" title="Sepetten Kaldır">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                }
+                else
+                {
+                    <div class="alert alert-warning text-center p-5 rounded-4 shadow-sm" role="alert">
+                        <i class="bi bi-cart-x" style="font-size: 3rem;"></i>
+                        <h4 class="mt-3 fw-bold">Sepetinizde Ürün Bulunmamaktadır!</h4>
+                        <p class="text-muted">Alışverişe devam etmek için ürünlere göz atın.</p>
+                        <a href="/Products" class="btn btn-primary mt-3">Ürünlere Göz At</a>
+                    </div>
+                }
+            </div>
+        </div>
+
+        <!-- Sepet Özeti -->
+        @if (Model.CartLines.Any())
+        {
+            <div class="col-lg-4">
+                <div class="bg-white p-4 rounded-4 shadow-sm border">
+                    <h4 class="fw-bold mb-4 text-center text-primary">
+                        🧾 Sepet Özeti
+                    </h4>
+                    <table class="table mb-4">
+                        <tbody>
+                            <tr>
+                                <td class="fw-semibold">Ara Toplam</td>
+                                <td class="text-end">@Model.TotalPrice.ToString("c")</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-semibold">Kargo</td>
+                                <td class="text-end">
+                                    @(Model.TotalPrice > 999 ? "Ücretsiz" : "99₺")
+                                </td>
+                            </tr>
+                            <tr class="table-info">
+                                <th class="fw-bold">Genel Toplam</th>
+                                <th class="text-end">
+                                    @(Model.TotalPrice > 999 
+                                        ? Model.TotalPrice.ToString("c") 
+                                        : (Model.TotalPrice + 99).ToString("c"))
+                                </th>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="d-grid gap-3">
+                        <a href="/Cart/Checkout" class="btn btn-success btn-lg">
+                            <i class="bi bi-bag-check"></i> Satın Al
+                        </a>
+                        <a href="/Products" class="btn btn-outline-primary">
+                            <i class="bi bi-arrow-left"></i> Alışverişe Devam Et
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</section>

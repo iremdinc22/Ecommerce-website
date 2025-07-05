@@ -1,0 +1,126 @@
+@using Eticaret.WebUI.ExtensionMethods
+@using Eticaret.Service.Concrete
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" asp-controller="Home" asp-action="Index">Eticaret.WebUI</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-controller="Home" asp-action="Index">Anasayfa</a>
+                    </li>
+                    @await Component.InvokeAsync("Categories")
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-controller="Home" asp-action="ContactUs">İletişim</a>
+                    </li>
+                </ul>
+
+                <form class="d-flex me-lg-3 mb-3 mb-lg-0" action="/Products" role="search">
+                    <input class="form-control" type="search" name="q" placeholder="Ürün Ara..." aria-label="Search">
+                </form>
+
+                <ul class="navbar-nav align-items-lg-center">
+
+                    <!-- Favoriler -->
+                    <li class="nav-item position-relative">
+                        <a class="nav-link text-danger d-flex align-items-center" href="/Favorites">
+                            <i class="bi bi-heart-fill fs-5"></i>
+                            <span class="ms-1">Favorilerim</span>
+                            @{
+                                var favorites = Context.Session.GetJson<List<int>>("Favorites");
+                                if (favorites != null && favorites.Count > 0)
+                                {
+                                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                        @favorites.Count
+                                    </span>
+                                }
+                            }
+                        </a>
+                    </li>
+
+                        <!-- Sepet -->
+                     <li class="nav-item dropdown position-relative me-2">
+                   @{
+                   var cart = Context.Session.GetJson<CartService>("Cart");
+                    }
+               <a class="nav-link dropdown-toggle text-dark d-flex align-items-center position-relative" href="#" role="button"
+                 data-bs-toggle="dropdown" aria-expanded="false">
+               <i class="bi bi-cart-check fs-5 position-relative">
+                @if (cart != null && cart.CartLines.Count > 0)
+                {
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success"
+                      style="font-size: 0.75rem; padding: 0.3em 0.6em;">
+                    @cart.CartLines.Sum(x => x.Quantity)
+                </span>
+            }
+        </i>
+        <span class="ms-1">Sepetim</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end p-2" style="min-width: 250px;">
+        @if (cart != null && cart.CartLines.Count > 0)
+        {
+            foreach (var item in cart.CartLines)
+            {
+                <li>
+                    <a class="dropdown-item d-flex align-items-center" href="/Products/Details/@item.Product.Id">
+                        <img src="/Img/Products/@item.Product.Image" alt="@item.Product.Name" height="40"
+                             class="me-2 rounded" />
+                        <span>@item.Product.Name</span>
+                    </a>
+                </li>
+            }
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item text-center fw-semibold" href="/Cart">Sepeti Görüntüle</a></li>
+        }
+        else
+        {
+            <li class="dropdown-item text-muted text-center">Sepetiniz boş</li>
+        }
+    </ul>
+</li>
+
+
+                    <!-- Hesap -->
+                    <li class="nav-item dropdown">
+                        @if (Context.User.Identity.IsAuthenticated)
+                        {
+                            <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown"
+                               aria-expanded="false">
+                                <i class="bi bi-person-fill"></i> Hesabım
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="/Account">Kullanıcı Bilgilerim</a></li>
+                                <li><a class="dropdown-item" href="/MyAddresses">Kayıtlı Adreslerim</a></li>
+                                <li><a class="dropdown-item" href="/Account/MyOrders">Siparişlerim</a></li>
+                                <li><a class="dropdown-item" href="/Account">Değerlendirmelerim</a></li>
+                                <li class="px-3 pb-2">
+                                <a href="/Account/SignOut" class="btn btn-danger btn-sm w-100">
+                                <i class="bi bi-box-arrow-right me-1"></i> Oturumu Kapat
+                                </a>
+                                </li>
+                            </ul>
+                        }
+                        else
+                        {
+                            <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown"
+                               aria-expanded="false">
+                                <i class="bi bi-person"></i> Giriş Yap
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="/Account/SignIn">Giriş</a></li>
+                                <li><a class="dropdown-item" href="/Account/SignUp">Üye Ol</a></li>
+                            </ul>
+                        }
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

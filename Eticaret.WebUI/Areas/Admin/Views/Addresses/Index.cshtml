@@ -1,0 +1,76 @@
+
+@model IEnumerable<Eticaret.Core.Entities.Address>
+
+@{
+    ViewData["Title"] = "Adresler";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <a asp-action="Create" class="btn btn-primary d-flex align-items-center">
+        <i class="fa-solid fa-plus me-2"></i> Yeni Adres Ekle
+    </a>
+</div>
+
+<div class="card shadow-sm">
+    <div class="card-body p-0">
+        <table class="table table-hover mb-0">
+            <thead class="table-light">
+                <tr>
+                    <th>Başlık</th>
+                    <th>Şehir</th>
+                    <th>İlçe</th>
+                    <th>Açık Adres</th>
+                    <th>Aktif Mi?</th>
+                    <th>Fatura Adresi?</th>
+                    <th>Teslimat Adresi?</th>
+                    <th>AppUser</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Title</td>
+                        <td>@item.City</td>
+                        <td>@item.District</td>
+                        <td>@item.OpenAddress</td>
+                        <td class="text-center">
+                            @(item.IsActive
+                                                    ? "☑️"
+                                                    : "☐")
+                                                      </td>
+
+                        <td class="text-center">
+                            @(item.IsBillingAddress
+                                                    ? "☑️"
+                                                    : "☐")
+                                                      </td>
+
+                        <td class="text-center">
+                            @(item.IsDeliveryAddress
+                                                    ? "☑️"
+                                                    : "☐")
+                    </td>
+                         <td>@item.AppUser?.Email</td>
+
+
+                        <td>
+                            <a class="btn btn-sm btn-primary mb-1" asp-action="Edit" asp-route-id="@item.Id">
+                                <i class="fa-solid fa-pen-to-square me-1"></i> Düzenle
+                            </a>
+
+                            <a class="btn btn-sm btn-info text-white mb-1" asp-action="Details" asp-route-id="@item.Id">
+                                <i class="fa-solid fa-circle-info me-1"></i> Detay
+                            </a>
+
+                            <a class="btn btn-sm btn-danger" asp-action="Delete" asp-route-id="@item.Id">
+                                <i class="fa-solid fa-trash me-1"></i> Sil
+                            </a>
+
+                        </td>
+                    </tr>
+                                }
+            </tbody>
+        </table>
+    </div>
+</div>

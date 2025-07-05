@@ -1,0 +1,44 @@
+@model Eticaret.Core.Entities.Product
+@{
+    ViewData["Title"] = "Ürünü Sil";
+}
+
+<h3>Kayıt silinecek! Onaylıyor musunuz?</h3>
+<hr />
+
+<dl class="row">
+    <dt class="col-sm-2">@Html.DisplayNameFor(model => model.Name)</dt>
+    <dd class="col-sm-10">@Html.DisplayFor(model => model.Name)</dd>
+
+    <dt class="col-sm-2">@Html.DisplayNameFor(model => model.Description)</dt>
+    <dd class="col-sm-10">@Html.DisplayFor(model => model.Description)</dd>
+
+    <dt class="col-sm-2">@Html.DisplayNameFor(model => model.Image)</dt>
+    <dd class="col-sm-10">
+
+        <img src="/Img/Products/@Model.Image" height="75" />
+    </dd>
+
+    <dt class="col-sm-2">@Html.DisplayNameFor(model => model.Price)</dt>
+    <dd class="col-sm-10">@Html.DisplayFor(model => model.Price)</dd>
+
+    <dt class="col-sm-2">@Html.DisplayNameFor(model => model.ProductCode)</dt>
+    <dd class="col-sm-10">@Html.DisplayFor(model => model.ProductCode)</dd>
+     
+     <dt class="col-sm-2">@Html.DisplayNameFor(model => model.CategoryId)</dt>
+    <dd class="col-sm-10">@Html.DisplayFor(model => model.CategoryId)</dd>
+
+     <dt class="col-sm-2">@Html.DisplayNameFor(model => model.BrandId)</dt>
+    <dd class="col-sm-10">@Html.DisplayFor(model => model.BrandId)</dd>
+
+    <dt class="col-sm-2">@Html.DisplayNameFor(model => model.Stock)</dt>
+    <dd class="col-sm-10">@Html.DisplayFor(model => model.Stock)</dd>
+
+    <dt class="col-sm-2">@Html.DisplayNameFor(model => model.IsActive)</dt>
+    <dd class="col-sm-10">@Html.DisplayFor(model => model.IsActive)</dd>
+
+<form asp-action="Delete">
+    <input type="hidden" asp-for="Id" />
+    <input type="submit" value="Sil" class="btn btn-danger" />
+    <a asp-action="Index" class="btn btn-secondary">Listeye Dön</a>
+</form>

@@ -1,0 +1,57 @@
+@model List<Product>
+
+@{
+    ViewData["Title"] = "Favorilerim";
+}
+
+<section class="container my-5">
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold text-danger d-flex justify-content-center align-items-center gap-2">
+            <i class="bi bi-heart-fill"></i> Favorilerim
+        </h1>
+        <p class="lead text-muted">Beğendiğin ürünler burada yer alıyor. 🎈</p>
+    </div>
+
+    @if (Model.Any())
+    {
+        <div class="row justify-content-center g-3">
+            @foreach (var item in Model)
+            {
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                    <div class="card h-100 shadow-sm border-0">
+                        <a href="/Products/Details/@item.Id">
+                            <img src="/Img/Products/@item.Image"
+                                 class="card-img-top"
+                                 alt="@item.Name"
+                                 style="height: 180px; object-fit: cover;" />
+                        </a>
+                        <div class="card-body d-flex flex-column px-2">
+                            <h6 class="card-title mb-1 text-truncate">@item.Name</h6>
+                            <p class="card-text fw-bold text-primary">@item.Price.ToString("c")</p>
+                            <div class="mt-auto d-flex justify-content-between align-items-center">
+                                <a href="/Products/Details/@item.Id" class="btn btn-outline-dark btn-sm">
+                                    İncele
+                                </a>
+                                <form asp-action="Remove" asp-controller="Favorites" method="post" class="d-inline">
+                                    <input type="hidden" name="ProductId" value="@item.Id" />
+                                    <button type="submit" class="btn btn-sm btn-outline-danger" title="Favorilerden Kaldır">
+                                        <i class="bi bi-x-lg"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="text-center my-5">
+            <img src="https://cdn-icons-png.flaticon.com/512/4076/4076508.png" alt="Empty Favorites" width="150" class="mb-4" />
+            <h3 class="fw-bold text-secondary">Favorilerinizde ürün bulunmamaktadır!</h3>
+            <p class="text-muted">Hemen ürünleri keşfet ve favorilerine ekle. ✨</p>
+            <a href="/Products" class="btn btn-danger mt-3">Ürünleri Keşfet</a>
+        </div>
+    }
+</section>

@@ -1,0 +1,57 @@
+/Users/iremdinc/Desktop/Eticaret/Eticaret.Service/bin/Debug/net8.0/Eticaret.Service.deps.json
+/Users/iremdinc/Desktop/Eticaret/Eticaret.Service/bin/Debug/net8.0/Eticaret.Service.runtimeconfig.json
+/Users/iremdinc/Desktop/Eticaret/Eticaret.Service/bin/Debug/net8.0/Eticaret.Service.dll
+/Users/iremdinc/Desktop/Eticaret/Eticaret.Service/bin/Debug/net8.0/Eticaret.Service.pdb
+/Users/iremdinc/Desktop/Eticaret/Eticaret.Service/bin/Debug/net8.0/Eticaret.Core.dll
+/Users/iremdinc/Desktop/Eticaret/Eticaret.Service/bin/Debug/net8.0/Eticaret.Data.dll
+/Users/iremdinc/Desktop/Eticaret/Eticaret.Service/bin/Debug/net8.0/Eticaret.Data.pdb
+/Users/iremdinc/Desktop/Eticaret/Eticaret.Service/bin/Debug/net8.0/Eticaret.Core.pdb
+/Users/iremdinc/Desktop/Eticaret/Eticaret.Service/obj/Debug/net8.0/Eticaret.Service.csproj.AssemblyReference.cache
+/Users/iremdinc/Desktop/Eticaret/Eticaret.Service/obj/Debug/net8.0/Eticaret.Service.GeneratedMSBuildEditorConfig.editorconfig
+/Users/iremdinc/Desktop/Eticaret/Eticaret.Service/obj/Debug/net8.0/Eticaret.Service.AssemblyInfoInputs.cache
+/Users/iremdinc/Desktop/Eticaret/Eticaret.Service/obj/Debug/net8.0/Eticaret.Service.AssemblyInfo.cs
+/Users/iremdinc/Desktop/Eticaret/Eticaret.Service/obj/Debug/net8.0/Eticaret.Service.csproj.CoreCompileInputs.cache
+/Users/iremdinc/Desktop/Eticaret/Eticaret.Service/obj/Debug/net8.0/Eticaret.16464E91.Up2Date
+/Users/iremdinc/Desktop/Eticaret/Eticaret.Service/obj/Debug/net8.0/Eticaret.Service.dll
+/Users/iremdinc/Desktop/Eticaret/Eticaret.Service/obj/Debug/net8.0/refint/Eticaret.Service.dll
+/Users/iremdinc/Desktop/Eticaret/Eticaret.Service/obj/Debug/net8.0/Eticaret.Service.pdb
+/Users/iremdinc/Desktop/Eticaret/Eticaret.Service/obj/Debug/net8.0/Eticaret.Service.genruntimeconfig.cache
+/Users/iremdinc/Desktop/Eticaret/Eticaret.Service/obj/Debug/net8.0/ref/Eticaret.Service.dll
+/Users/iremdinc/Desktop/Eticaret 2/Eticaret.Service/bin/Debug/net8.0/Eticaret.Service.deps.json
+/Users/iremdinc/Desktop/Eticaret 2/Eticaret.Service/bin/Debug/net8.0/Eticaret.Service.runtimeconfig.json
+/Users/iremdinc/Desktop/Eticaret 2/Eticaret.Service/bin/Debug/net8.0/Eticaret.Service.dll
+/Users/iremdinc/Desktop/Eticaret 2/Eticaret.Service/bin/Debug/net8.0/Eticaret.Service.pdb
+/Users/iremdinc/Desktop/Eticaret 2/Eticaret.Service/bin/Debug/net8.0/Eticaret.Core.dll
+/Users/iremdinc/Desktop/Eticaret 2/Eticaret.Service/bin/Debug/net8.0/Eticaret.Data.dll
+/Users/iremdinc/Desktop/Eticaret 2/Eticaret.Service/bin/Debug/net8.0/Eticaret.Data.pdb
+/Users/iremdinc/Desktop/Eticaret 2/Eticaret.Service/bin/Debug/net8.0/Eticaret.Core.pdb
+/Users/iremdinc/Desktop/Eticaret 2/Eticaret.Service/obj/Debug/net8.0/Eticaret.Service.csproj.AssemblyReference.cache
+/Users/iremdinc/Desktop/Eticaret 2/Eticaret.Service/obj/Debug/net8.0/Eticaret.Service.GeneratedMSBuildEditorConfig.editorconfig
+/Users/iremdinc/Desktop/Eticaret 2/Eticaret.Service/obj/Debug/net8.0/Eticaret.Service.AssemblyInfoInputs.cache
+/Users/iremdinc/Desktop/Eticaret 2/Eticaret.Service/obj/Debug/net8.0/Eticaret.Service.AssemblyInfo.cs
+/Users/iremdinc/Desktop/Eticaret 2/Eticaret.Service/obj/Debug/net8.0/Eticaret.Service.csproj.CoreCompileInputs.cache
+/Users/iremdinc/Desktop/Eticaret 2/Eticaret.Service/obj/Debug/net8.0/Eticaret.16464E91.Up2Date
+/Users/iremdinc/Desktop/Eticaret 2/Eticaret.Service/obj/Debug/net8.0/Eticaret.Service.dll
+/Users/iremdinc/Desktop/Eticaret 2/Eticaret.Service/obj/Debug/net8.0/refint/Eticaret.Service.dll
+/Users/iremdinc/Desktop/Eticaret 2/Eticaret.Service/obj/Debug/net8.0/Eticaret.Service.pdb
+/Users/iremdinc/Desktop/Eticaret 2/Eticaret.Service/obj/Debug/net8.0/Eticaret.Service.genruntimeconfig.cache
+/Users/iremdinc/Desktop/Eticaret 2/Eticaret.Service/obj/Debug/net8.0/ref/Eticaret.Service.dll
+/Users/iremdinc/Desktop/Eticaret /Eticaret.Service/bin/Debug/net8.0/Eticaret.Service.deps.json
+/Users/iremdinc/Desktop/Eticaret /Eticaret.Service/bin/Debug/net8.0/Eticaret.Service.runtimeconfig.json
+/Users/iremdinc/Desktop/Eticaret /Eticaret.Service/bin/Debug/net8.0/Eticaret.Service.dll
+/Users/iremdinc/Desktop/Eticaret /Eticaret.Service/bin/Debug/net8.0/Eticaret.Service.pdb
+/Users/iremdinc/Desktop/Eticaret /Eticaret.Service/bin/Debug/net8.0/Eticaret.Core.dll
+/Users/iremdinc/Desktop/Eticaret /Eticaret.Service/bin/Debug/net8.0/Eticaret.Data.dll
+/Users/iremdinc/Desktop/Eticaret /Eticaret.Service/bin/Debug/net8.0/Eticaret.Data.pdb
+/Users/iremdinc/Desktop/Eticaret /Eticaret.Service/bin/Debug/net8.0/Eticaret.Core.pdb
+/Users/iremdinc/Desktop/Eticaret /Eticaret.Service/obj/Debug/net8.0/Eticaret.Service.csproj.AssemblyReference.cache
+/Users/iremdinc/Desktop/Eticaret /Eticaret.Service/obj/Debug/net8.0/Eticaret.Service.GeneratedMSBuildEditorConfig.editorconfig
+/Users/iremdinc/Desktop/Eticaret /Eticaret.Service/obj/Debug/net8.0/Eticaret.Service.AssemblyInfoInputs.cache
+/Users/iremdinc/Desktop/Eticaret /Eticaret.Service/obj/Debug/net8.0/Eticaret.Service.AssemblyInfo.cs
+/Users/iremdinc/Desktop/Eticaret /Eticaret.Service/obj/Debug/net8.0/Eticaret.Service.csproj.CoreCompileInputs.cache
+/Users/iremdinc/Desktop/Eticaret /Eticaret.Service/obj/Debug/net8.0/Eticaret.16464E91.Up2Date
+/Users/iremdinc/Desktop/Eticaret /Eticaret.Service/obj/Debug/net8.0/Eticaret.Service.dll
+/Users/iremdinc/Desktop/Eticaret /Eticaret.Service/obj/Debug/net8.0/refint/Eticaret.Service.dll
+/Users/iremdinc/Desktop/Eticaret /Eticaret.Service/obj/Debug/net8.0/Eticaret.Service.pdb
+/Users/iremdinc/Desktop/Eticaret /Eticaret.Service/obj/Debug/net8.0/Eticaret.Service.genruntimeconfig.cache
+/Users/iremdinc/Desktop/Eticaret /Eticaret.Service/obj/Debug/net8.0/ref/Eticaret.Service.dll

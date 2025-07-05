@@ -1,0 +1,82 @@
+@model Eticaret.Core.Entities.Product
+
+@{
+    ViewData["Title"] = "Ürün Detayı";
+}
+
+
+<dl class="row mb-2">
+
+    <dt class="col-sm-2 fw-bold">
+        @Html.DisplayNameFor(model => model.Name)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.Name)
+    </dd>
+
+    <dt class="col-sm-2 fw-bold">
+        @Html.DisplayNameFor(model => model.Description)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.Description)
+    </dd>
+
+    <dt class="col-sm-2 fw-bold">
+        @Html.DisplayNameFor(model => model.Image)
+    </dt>
+    <dd class="col-sm-10">
+        <img src="/Img/Products/@Model.Image" height="75" alt="Ürün Resmi" />
+    </dd>
+
+    <dt class="col-sm-2 fw-bold">
+        @Html.DisplayNameFor(model => model.Price)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.Price)
+    </dd>
+
+    <dt class="col-sm-2 fw-bold">
+        @Html.DisplayNameFor(model => model.ProductCode)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.ProductCode)
+    </dd>
+
+     <dt class="col-sm-2 fw-bold">
+        @Html.DisplayNameFor(model => model.Category)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.Category)
+    </dd>
+
+     <dt class="col-sm-2 fw-bold">
+        @Html.DisplayNameFor(model => model.Brand)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.Brand)
+    </dd>
+
+    <dt class="col-sm-2 fw-bold">
+        @Html.DisplayNameFor(model => model.Stock)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.Stock)
+    </dd>
+
+    <dt class="col-sm-2 fw-bold">
+        @Html.DisplayNameFor(model => model.IsActive)
+    </dt>
+    <dd class="col-sm-10">
+        <input type="checkbox" class="form-check-input" disabled @(Model.IsActive ? "checked" : "") />
+    </dd>
+
+</dl>
+
+<div class="mt-3">
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning me-2">
+        <i class="fa-solid fa-pen me-1"></i> Düzenle
+    </a>
+    <a asp-action="Index" class="btn btn-secondary">
+        <i class="fa-solid fa-arrow-left me-1"></i> Listeye Dön
+    </a>
+</div>

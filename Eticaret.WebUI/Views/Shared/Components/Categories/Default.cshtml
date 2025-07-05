@@ -1,0 +1,31 @@
+@model IEnumerable<Category>
+
+@using System.Linq
+
+@foreach (var anaKategori in Model.Where(c => c.IsActive && c.IsTopMenu && c.ParentId == 0))
+{
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle text-dark"
+           href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            @anaKategori.Name
+        </a>
+
+        @{
+            var altKategoriler = Model.Where(c => c.IsActive && c.IsTopMenu && c.ParentId == anaKategori.Id).ToList();
+        }
+
+        @if (altKategoriler.Any())
+        {
+            <ul class="dropdown-menu">
+                @foreach (var altKategori in altKategoriler)
+                {
+                    <li>
+                        <a class="dropdown-item" href="/Categories/Index/@altKategori.Id">
+                            @altKategori.Name
+                        </a>
+                    </li>
+                }
+            </ul>
+        }
+    </li>
+}

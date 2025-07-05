@@ -1,0 +1,65 @@
+@model IEnumerable<Category>
+
+@{
+    ViewData["Title"] = "Kategoriler";
+}
+
+<p>
+    <a asp-action="Create" class="btn btn-outline-primary d-inline-flex align-items-center">
+        <i class="fa-solid fa-plus me-2"></i> Yeni Ekle
+    </a>
+</p>
+
+<table class="table table-hover table-striped">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Id)</th>
+            <th>@Html.DisplayNameFor(model => model.Name)</th>
+            <th>@Html.DisplayNameFor(model => model.CreateDate)</th>
+            <th>@Html.DisplayNameFor(model => model.Image)</th>
+            <th>@Html.DisplayNameFor(model => model.IsActive)</th>
+            <th>@Html.DisplayNameFor(model => model.IsTopMenu)</th>
+            <th>@Html.DisplayNameFor(model => model.ParentId)</th>
+            <th>@Html.DisplayNameFor(model => model.OrderNo)</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.CreateDate.ToShortTimeString()</td>
+
+               
+
+                <td>
+                @if (!string.IsNullOrWhiteSpace(item.Image))
+                    {
+                        <img src="/Img/Categories/@item.Image" height="40" />
+                    }
+                </td>
+
+                <td>@(item.IsActive ? "Evet" : "Hayır")</td>
+                <td>@(item.IsTopMenu ? "Evet" : "Hayır")</td>
+                <td>@item.ParentId</td>
+                <td>@item.OrderNo</td>
+
+                <td>
+                    <a class="btn btn-sm btn-primary" asp-action="Edit" asp-route-id="@item.Id">
+                        <i class="fa-solid fa-pen-to-square me-1"></i> Düzenle
+                    </a>
+
+                    <a class="btn btn-sm btn-info text-white" asp-action="Details" asp-route-id="@item.Id">
+                        <i class="fa-solid fa-circle-info me-1"></i> Detay
+                    </a>
+
+                    <a class="btn btn-sm btn-danger" asp-action="Delete" asp-route-id="@item.Id">
+                        <i class="fa-solid fa-trash me-1"></i> Sil
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

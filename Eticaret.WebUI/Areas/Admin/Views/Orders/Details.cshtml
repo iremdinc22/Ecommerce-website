@@ -1,0 +1,80 @@
+@model Eticaret.Core.Entities.Order
+@using System.Globalization
+@using Eticaret.WebUI.Extensions
+@using Eticaret.Core.Enums
+
+
+@{
+    ViewData["Title"] = "Sipariş Detay";
+
+    // Genel toplam hesapla (ürünlerin toplam fiyatı)
+    decimal genelToplam = Model.OrderLines?.Sum(x => x.UnitPrice * x.Quantity) ?? 0;
+}
+
+<dl class="row mb-2">
+    <dt class="col-sm-2">@Html.DisplayNameFor(model => model.OrderNumber)</dt>
+    <dd class="col-sm-10">@Html.DisplayFor(model => model.OrderNumber)</dd>
+
+    <dt class="col-sm-2">@Html.DisplayNameFor(model => model.TotalPrice)</dt>
+    <dd class="col-sm-10">@Model.TotalPrice.ToString("C", new CultureInfo("tr-TR"))</dd>
+
+    <dt class="col-sm-2">@Html.DisplayNameFor(model => model.AppUser)</dt>
+    <dd class="col-sm-10">@Model.AppUser.Name @Model.AppUser.Surname</dd>
+
+    <dt class="col-sm-2">Fatura Adresi</dt>
+    <dd class="col-sm-10">@Model.BillingAddress</dd>
+
+    <dt class="col-sm-2">Teslimat Adresi</dt>
+    <dd class="col-sm-10">@Model.DeliveryAddress</dd>
+
+    <dt class="col-sm-2">@Html.DisplayNameFor(model => model.OrderDate)</dt>
+    <dd class="col-sm-10">@Model.OrderDate.ToString("dd.MM.yyyy HH:mm")</dd>
+
+    <dt class="col-sm-2">Sipariş Durumu</dt>
+    <dd class="col-sm-10">@Model.OrderState?.GetDisplayName()</dd>
+
+
+</dl>
+
+@if (Model.OrderLines != null && Model.OrderLines.Any())
+{
+    <h4 class="mt-4">Sipariş Ürünleri</h4>
+
+    @foreach (var item in Model.OrderLines)
+    {
+        <div class="d-flex align-items-center justify-content-between p-3 mb-3 border rounded shadow-sm bg-white">
+            <div class="d-flex align-items-center gap-3">
+                <img src="~/Img/Products/@item.Product?.Image" alt="Ürün" width="70" height="70" class="rounded" />
+                <div>
+                    <a asp-controller="Products" asp-action="Details" asp-route-id="@item.ProductId" target="_blank"
+                        class="fw-semibold text-decoration-none text-dark">
+                        @item.Product?.Name
+                    </a>
+                    <div class="text-muted small">Miktar: <strong>@item.Quantity</strong> adet</div>
+                </div>
+            </div>
+            <div class="text-end">
+                <div class="text-muted small">Birim Fiyat</div>
+                <div class="fw-semibold">@item.UnitPrice.ToString("C", new CultureInfo("tr-TR"))</div>
+                <div class="text-muted small">Toplam</div>
+                <div class="fw-semibold text-success">
+                    @((item.UnitPrice * item.Quantity).ToString("C", new CultureInfo("tr-TR")))
+                </div>
+            </div>
+        </div>
+    }
+
+}
+else
+{
+    <p class="text-muted mt-4">Bu siparişe ait ürün bulunmamaktadır.</p>
+}
+
+<div class="mt-4">
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning me-2">
+        <i class="fa-solid fa-pen me-1"></i> Düzenle
+    </a>
+    <a asp-action="Index" class="btn btn-secondary">
+        <i class="fa-solid fa-arrow-left me-1"></i> Listeye Dön
+    </a>
+</div>

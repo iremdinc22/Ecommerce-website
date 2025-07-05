@@ -1,0 +1,65 @@
+@model Eticaret.Core.Entities.Order
+@using Eticaret.WebUI.Extensions
+@using Eticaret.Core.Enums
+
+
+@{
+    ViewData["Title"] = "Sipariş Ekle";
+}
+
+<h2 class="mb-4">Yeni Sipariş Ekle</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Create" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+            <div class="form-group mb-3">
+                <label asp-for="OrderNumber" class="form-label"></label>
+                <input asp-for="OrderNumber" class="form-control" />
+                <span asp-validation-for="OrderNumber" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="TotalPrice" class="form-label"></label>
+                <input asp-for="TotalPrice" class="form-control" />
+                <span asp-validation-for="TotalPrice" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label class="form-label">Müşteri</label>
+                <input class="form-control" value="@($"{Model.AppUser.Name} {Model.AppUser.Surname}")" readonly />
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="AppUser" class="form-label"></label>
+                <input asp-for="AppUser" class="form-control" />
+                <span asp-validation-for="AppUser" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="BillingAddress" class="form-label"></label>
+                <input asp-for="BillingAddress" class="form-control" />
+                <span asp-validation-for="BillingAddress" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="DeliveryAddress" class="form-label"></label>
+                <input asp-for="DeliveryAddress" class="form-control" />
+                <span asp-validation-for="DeliveryAddress" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-4">
+                <label asp-for="OrderDate" class="form-label"></label>
+                <input asp-for="OrderDate" class="form-control" type="datetime-local" />
+                <span asp-validation-for="OrderDate" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mt-3">
+                <button type="submit" class="btn btn-primary">
+                    <i class="fa-solid fa-check me-1"></i> Ekle
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

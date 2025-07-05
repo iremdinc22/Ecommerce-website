@@ -1,0 +1,44 @@
+@model Eticaret.Core.Entities.Order
+@using Eticaret.WebUI.Extensions
+@using Eticaret.Core.Enums
+
+
+@{
+    ViewData["Title"] = "Sipariş Sil";
+}
+
+<h3>Kayıt silinecek! Onaylıyor musunuz?</h3>
+<hr />
+
+<dl class="row">
+    <dt class="col-sm-2">@Html.DisplayNameFor(model => model.OrderNumber)</dt>
+    <dd class="col-sm-10">@Html.DisplayFor(model => model.OrderNumber)</dd>
+
+    <dt class="col-sm-2">@Html.DisplayNameFor(model => model.TotalPrice)</dt>
+    <dd class="col-sm-10">@Html.DisplayFor(model => model.TotalPrice)</dd>
+
+    <dt class="col-sm-2">@Html.DisplayNameFor(model => model.AppUserId)</dt>
+    <dd class="col-sm-10">@Html.DisplayFor(model => model.AppUserId)</dd>
+
+    <dt class="col-sm-2">@Html.DisplayNameFor(model => model.AppUser)</dt>
+    <dd class="col-sm-10">@Html.DisplayFor(model => model.AppUser.Name)
+        @Html.DisplayFor(model => model.AppUser.Surname)</dd>
+
+    <dt class="col-sm-2">@Html.DisplayNameFor(model => model.BillingAddress)</dt>
+    <dd class="col-sm-10">@Html.DisplayFor(model => model.BillingAddress)</dd>
+
+    <dt class="col-sm-2">@Html.DisplayNameFor(model => model.DeliveryAddress)</dt>
+    <dd class="col-sm-10">@Html.DisplayFor(model => model.DeliveryAddress)</dd>
+
+    <dt class="col-sm-2">@Html.DisplayNameFor(model => model.OrderDate)</dt>
+    <dd class="col-sm-10">@Html.DisplayFor(model => model.OrderDate)</dd>
+
+    <dt class="col-sm-2">Sipariş Durumu</dt>
+    <dd class="col-sm-10">@Model.OrderState?.GetDisplayName()</dd>
+
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Sil" class="btn btn-danger" />
+        <a asp-action="Index" class="btn btn-secondary">Listeye Dön</a>
+    </form>

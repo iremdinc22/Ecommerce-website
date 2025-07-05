@@ -1,0 +1,67 @@
+@model IEnumerable<Product>
+
+@{
+    ViewData["Title"] = "Ürünler";
+}
+
+<p>
+    <a asp-action="Create" class="btn btn-outline-primary d-inline-flex align-items-center">
+        <i class="fa-solid fa-plus me-2"></i> Yeni Ekle
+    </a>
+</p>
+
+<table class="table table-hover table-striped">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Name)</th>
+            <th>@Html.DisplayNameFor(model => model.CreateDate)</th>
+            <th>@Html.DisplayNameFor(model => model.Image)</th>
+            <th>@Html.DisplayNameFor(model => model.Price)</th>
+            <th>@Html.DisplayNameFor(model => model.ProductCode)</th>
+            <th>@Html.DisplayNameFor(model => model.Stock)</th>
+            <th>@Html.DisplayNameFor(model => model.IsActive)</th>
+            <th>@Html.DisplayNameFor(model => model.IsHome)</th>
+            <th>@Html.DisplayNameFor(model => model.Category)</th>
+            <th>@Html.DisplayNameFor(model => model.Brand)</th>
+            <th>İşlemler</th> <!-- ✅ EKSİK BAŞLIK BURAYA EKLENDİ -->
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.CreateDate.ToString("dd.MM.yyyy")</td>
+                <td>
+                    @if (!string.IsNullOrWhiteSpace(item.Image))
+                    {
+                        <img src="/Img/Products/@item.Image" height="40" />
+                    }
+                </td>
+                <td>@item.Price</td>
+                <td>@item.ProductCode</td>
+                <td>@item.Stock</td>
+                <td class="text-center">
+                    <input type="checkbox" class="form-check-input" disabled checked="@(item.IsActive)" />
+                </td>
+                <td class="text-center">
+                    <input type="checkbox" class="form-check-input" disabled checked="@(item.IsHome)" />
+                </td>
+                <td>@item.Category?.Name</td>
+                <td>@item.Brand?.Name</td>
+                <td>
+                    <a class="btn btn-sm btn-warning" asp-action="Edit" asp-route-id="@item.Id">
+                        <i class="fa-solid fa-pen-to-square me-1"></i> Düzenle
+                    </a>
+                    <a class="btn btn-sm btn-info text-white" asp-action="Details" asp-route-id="@item.Id">
+                        <i class="fa-solid fa-circle-info me-1"></i> Detay
+                    </a>
+                    <a class="btn btn-sm btn-danger" asp-action="Delete" asp-route-id="@item.Id">
+                        <i class="fa-solid fa-trash me-1"></i> Sil
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

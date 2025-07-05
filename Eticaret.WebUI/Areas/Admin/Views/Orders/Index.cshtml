@@ -1,0 +1,60 @@
+@using Eticaret.WebUI.Extensions
+@model IEnumerable<Order> 
+@using Eticaret.Core.Enums
+
+
+
+@{
+    ViewData["Title"] = "Siparişler";
+}
+
+<p class="d-flex gap-2">
+    <a asp-action="Create" class="btn btn-outline-primary d-inline-flex align-items-center">
+        <i class="fa-solid fa-plus me-2"></i> Yeni Ekle
+    </a>
+
+    @* 
+<form asp-action="FixAddressTexts" method="post" class="d-inline">
+    <button type="submit" class="btn btn-warning d-inline-flex align-items-center">
+        <i class="fa-solid fa-wrench me-2"></i> Adresleri Güncelle
+    </button>
+</form>
+*@
+
+</p>
+
+<table class="table table-hover table-striped">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.OrderNumber)</th>
+            <th>@Html.DisplayNameFor(model => model.TotalPrice)</th>
+            <th>@Html.DisplayNameFor(model => model.AppUser)</th>
+            <th>@Html.DisplayNameFor(model => model.OrderDate)</th>
+            <th>@Html.DisplayNameFor(model => model.OrderState)</th>
+            <th>İşlemler</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.OrderNumber</td>
+                <td>@item.TotalPrice ₺</td>
+                <td>@item.AppUser.Name @item.AppUser.Surname</td>
+                <td>@item.OrderDate.ToString("dd.MM.yyyy")</td>
+                <td>@item.OrderState.GetDisplayName()</td>
+                <td>
+                    <a class="btn btn-sm btn-primary" asp-action="Edit" asp-route-id="@item.Id">
+                        <i class="fa-solid fa-pen-to-square me-1"></i> Düzenle
+                    </a>
+                    <a class="btn btn-sm btn-info text-white" asp-action="Details" asp-route-id="@item.Id">
+                        <i class="fa-solid fa-circle-info me-1"></i> Detay
+                    </a>
+                    <a class="btn btn-sm btn-danger" asp-action="Delete" asp-route-id="@item.Id">
+                        <i class="fa-solid fa-trash me-1"></i> Sil
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

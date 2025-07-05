@@ -1,0 +1,11 @@
+# ASP.NET Core
+bin/
+obj/
+.vs/
+*.user
+*.suo
+*.swp
+
+# Visual Studio Code
+.vscode/
+.idea/

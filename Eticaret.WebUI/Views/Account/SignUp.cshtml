@@ -1,0 +1,66 @@
+@model Eticaret.Core.Entities.AppUser
+
+@{
+    ViewData["Title"] = "Üye Ol";
+    Layout= "_AccountLayout";
+}
+
+<section class="d-flex justify-content-center align-items-center vh-100 bg-light">
+    <div class="card shadow-lg rounded-4 p-4" style="width: 100%; max-width: 450px;">
+        <div class="text-center mb-3">
+            <i class="bi bi-person-plus-fill text-primary" style="font-size: 3rem;"></i>
+            <h2 class="fw-bold">Üye Ol</h2>
+            <p class="text-muted small">Kısa bir form ile hemen kaydolabilirsin.</p>
+        </div>
+
+        <form asp-action="SignUp">
+            <div asp-validation-summary="ModelOnly" class="text-danger small mb-3"></div>
+
+            <div class="mb-3">
+                <label asp-for="Name" class="form-label">Ad</label>
+                <input asp-for="Name" class="form-control form-control-sm rounded-3" />
+                <span asp-validation-for="Name" class="text-danger small"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Surname" class="form-label">Soyad</label>
+                <input asp-for="Surname" class="form-control form-control-sm rounded-3" />
+                <span asp-validation-for="Surname" class="text-danger small"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Email" class="form-label">E-posta</label>
+                <input asp-for="Email" class="form-control form-control-sm rounded-3" />
+                <span asp-validation-for="Email" class="text-danger small"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Phone" class="form-label">Telefon</label>
+                <input asp-for="Phone" class="form-control form-control-sm rounded-3" />
+                <span asp-validation-for="Phone" class="text-danger small"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="UserName" class="form-label">Kullanıcı Adı</label>
+                <input asp-for="UserName" class="form-control form-control-sm rounded-3" />
+                <span asp-validation-for="UserName" class="text-danger small"></span>
+            </div>
+
+            <div class="mb-4">
+                <label asp-for="Password" class="form-label">Şifre</label>
+                <input asp-for="Password" type="password" class="form-control form-control-sm rounded-3" />
+                <span asp-validation-for="Password" class="text-danger small"></span>
+            </div>
+
+            <div class="d-grid mb-2">
+                <button type="submit" class="btn btn-primary rounded-3">Kaydol</button>
+            </div>
+
+            <div class="text-center">
+                <a asp-action="SignIn" class="text-muted small text-decoration-none">
+                    Zaten bir hesabın var mı? Giriş yap
+                </a>
+            </div>
+        </form>
+    </div>
+</section>

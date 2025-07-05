@@ -1,0 +1,87 @@
+@model List<Eticaret.Core.Entities.Order>
+@{
+    ViewData["Title"] = "Siparişlerim";
+}
+
+<section class="container my-5">
+    <h2 class="text-center mb-5 text-primary fw-bold">
+        🛍 Siparişlerim
+    </h2>
+
+    @if (Model == null || !Model.Any())
+    {
+        <div class="alert alert-info text-center">Henüz bir siparişiniz bulunmamaktadır.</div>
+    }
+    else
+    {
+        foreach (var order in Model)
+        {
+            <div class="card shadow-sm border-0 rounded-4 mb-5">
+                <div class="card-body">
+
+                    <!-- Sipariş Özeti -->
+                    <div class="row g-4 mb-4">
+                        <div class="col-md-3">
+                            <div class="bg-light p-3 rounded text-center">
+                                <div class="fw-bold text-secondary">Sipariş No</div>
+                                <div class="fs-5">@order.OrderNumber</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="bg-light p-3 rounded text-center">
+                                <div class="fw-bold text-secondary">Toplam Tutar</div>
+                                <div class="fs-5 text-success">@order.TotalPrice.ToString("C")</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="bg-light p-3 rounded text-center">
+                                <div class="fw-bold text-secondary">Tarih</div>
+                                <div class="fs-6">@order.OrderDate.ToString("dd.MM.yyyy HH:mm")</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="bg-light p-3 rounded text-center">
+                                <div class="fw-bold text-secondary">Sipariş Durumu</div>
+                                <div class="fs-6">@order.OrderState</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-md-3">
+                            <div class="bg-light p-3 rounded text-center">
+                                <div class="fw-bold text-secondary">Ürün Sayısı</div>
+                                <div class="fs-5">@order.OrderLines.Count</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ürünler -->
+                    @foreach (var item in order.OrderLines)
+                    {
+                        <div class="d-flex align-items-center justify-content-between p-3 mb-3 border rounded shadow-sm bg-white">
+                            <div class="d-flex align-items-center gap-3">
+                                <img src="/Img/Products/@item.Product?.Image" alt="Ürün" width="70" height="70" class="rounded" />
+                                <div>
+                                    <a href="/Products/Details/@item.ProductId" target="_blank" class="fw-semibold text-decoration-none text-dark">
+                                        @item.Product?.Name
+                                    </a>
+                                    <div class="text-muted small">@item.Quantity adet</div>
+                                </div>
+                            </div>
+                            <div class="text-end">
+                                <div class="text-muted small">Birim Fiyat</div>
+                                <div class="fw-semibold">@item.UnitPrice.ToString("C")</div>
+                                <div class="text-muted small">Toplam</div>
+                                <div class="fw-semibold text-success">
+                                    @((item.UnitPrice * item.Quantity).ToString("C"))
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                </div>
+            </div>
+        }
+    }
+</section>
