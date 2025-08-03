@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+
+# Rider / VSCode
+.idea/
+.vscode/
+
+# Build
+bin/
+obj/
+
+# User files
+*.user
+*.suo
+*.log

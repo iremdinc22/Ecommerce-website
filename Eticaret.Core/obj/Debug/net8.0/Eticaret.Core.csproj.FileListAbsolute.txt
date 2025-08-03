@@ -40,3 +40,4 @@
 /Users/iremdinc/Desktop/Eticaret /Eticaret.Core/obj/Debug/net8.0/Eticaret.Core.pdb
 /Users/iremdinc/Desktop/Eticaret /Eticaret.Core/obj/Debug/net8.0/Eticaret.Core.genruntimeconfig.cache
 /Users/iremdinc/Desktop/Eticaret /Eticaret.Core/obj/Debug/net8.0/ref/Eticaret.Core.dll
+/Users/iremdinc/Desktop/Eticaret /Eticaret.Core/obj/Debug/net8.0/Eticaret.Core.sourcelink.json

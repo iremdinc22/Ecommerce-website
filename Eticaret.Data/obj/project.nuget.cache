@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "slCe5IFK+yw=",
+  "dgSpecHash": "uIUrfF+5F/I=",
   "success": true,
   "projectFilePath": "/Users/iremdinc/Desktop/Eticaret /Eticaret.Data/Eticaret.Data.csproj",
   "expectedPackageFiles": [
@@ -48,7 +48,9 @@
     "/Users/iremdinc/.nuget/packages/system.reflection.metadata/6.0.1/system.reflection.metadata.6.0.1.nupkg.sha512",
     "/Users/iremdinc/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "/Users/iremdinc/.nuget/packages/system.text.encoding.codepages/6.0.0/system.text.encoding.codepages.6.0.0.nupkg.sha512",
-    "/Users/iremdinc/.nuget/packages/system.threading.channels/6.0.0/system.threading.channels.6.0.0.nupkg.sha512"
+    "/Users/iremdinc/.nuget/packages/system.threading.channels/6.0.0/system.threading.channels.6.0.0.nupkg.sha512",
+    "/Users/iremdinc/.nuget/packages/microsoft.netcore.app.ref/8.0.18/microsoft.netcore.app.ref.8.0.18.nupkg.sha512",
+    "/Users/iremdinc/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.18/microsoft.aspnetcore.app.ref.8.0.18.nupkg.sha512"
   ],
   "logs": []
 }

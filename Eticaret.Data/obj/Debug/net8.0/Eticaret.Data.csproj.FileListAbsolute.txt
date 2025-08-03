@@ -49,3 +49,4 @@
 /Users/iremdinc/Desktop/Eticaret /Eticaret.Data/obj/Debug/net8.0/Eticaret.Data.pdb
 /Users/iremdinc/Desktop/Eticaret /Eticaret.Data/obj/Debug/net8.0/Eticaret.Data.genruntimeconfig.cache
 /Users/iremdinc/Desktop/Eticaret /Eticaret.Data/obj/Debug/net8.0/ref/Eticaret.Data.dll
+/Users/iremdinc/Desktop/Eticaret /Eticaret.Data/obj/Debug/net8.0/Eticaret.Data.sourcelink.json

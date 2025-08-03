@@ -55,3 +55,4 @@
 /Users/iremdinc/Desktop/Eticaret /Eticaret.Service/obj/Debug/net8.0/Eticaret.Service.pdb
 /Users/iremdinc/Desktop/Eticaret /Eticaret.Service/obj/Debug/net8.0/Eticaret.Service.genruntimeconfig.cache
 /Users/iremdinc/Desktop/Eticaret /Eticaret.Service/obj/Debug/net8.0/ref/Eticaret.Service.dll
+/Users/iremdinc/Desktop/Eticaret /Eticaret.Service/obj/Debug/net8.0/Eticaret.Service.sourcelink.json
