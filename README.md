@@ -36,7 +36,7 @@ This is a **full-featured e-commerce web application** built from scratch using 
 | ASP.NET Core MVC      | HTML5, CSS3, Bootstrap | Layered Architecture      |
 | C#                    | JavaScript, jQuery     | Repository Pattern        |
 | Entity Framework Core |                        | Fluent API                |
-| SQL Server            |                        | SanalPOS Integration      |
+| SQL Lite              |                        | SanalPOS Integration      |
 
 ---
 
