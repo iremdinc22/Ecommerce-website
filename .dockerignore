@@ -1,0 +1,21 @@
+# Build output klasörleri
+bin/
+obj/
+publish/
+
+# IDE config
+.vscode/
+.idea/
+
+# Git
+.git
+.gitignore
+
+# User-specific
+*.user
+*.suo
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
