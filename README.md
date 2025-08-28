@@ -8,8 +8,7 @@ This is a **full-featured e-commerce web application** built from scratch using 
 ---
 
 ## 🔗 Live Website  
-**Coming Soon...**  
-*(The live website link will be added here after deployment.)*
+🌍 **Live Demo:** [Click here](https://ecommerce-website-1skm.onrender.com/)
 
 ---
 
