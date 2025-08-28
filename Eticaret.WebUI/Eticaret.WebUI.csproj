@@ -26,4 +26,11 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+<ItemGroup>
+  <None Include="..\Eticaret.Data\VscodeEticaret.Db">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+</ItemGroup>
+
+
 </Project>
