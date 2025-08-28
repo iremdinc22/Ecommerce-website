@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/iremdinc/Desktop/Eticaret /Eticaret.Core/Eticaret.Core.csproj": {}
+    "/Users/iremdinc/Desktop/Ecommerce-website/Eticaret.Core/Eticaret.Core.csproj": {}
   },
   "projects": {
-    "/Users/iremdinc/Desktop/Eticaret /Eticaret.Core/Eticaret.Core.csproj": {
+    "/Users/iremdinc/Desktop/Ecommerce-website/Eticaret.Core/Eticaret.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/iremdinc/Desktop/Eticaret /Eticaret.Core/Eticaret.Core.csproj",
+        "projectUniqueName": "/Users/iremdinc/Desktop/Ecommerce-website/Eticaret.Core/Eticaret.Core.csproj",
         "projectName": "Eticaret.Core",
-        "projectPath": "/Users/iremdinc/Desktop/Eticaret /Eticaret.Core/Eticaret.Core.csproj",
+        "projectPath": "/Users/iremdinc/Desktop/Ecommerce-website/Eticaret.Core/Eticaret.Core.csproj",
         "packagesPath": "/Users/iremdinc/.nuget/packages/",
-        "outputPath": "/Users/iremdinc/Desktop/Eticaret /Eticaret.Core/obj/",
+        "outputPath": "/Users/iremdinc/Desktop/Ecommerce-website/Eticaret.Core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/iremdinc/.nuget/NuGet/NuGet.Config"

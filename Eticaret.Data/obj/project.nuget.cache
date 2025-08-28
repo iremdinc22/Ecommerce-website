@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uIUrfF+5F/I=",
+  "dgSpecHash": "KrwcFWNH7Xo=",
   "success": true,
-  "projectFilePath": "/Users/iremdinc/Desktop/Eticaret /Eticaret.Data/Eticaret.Data.csproj",
+  "projectFilePath": "/Users/iremdinc/Desktop/Ecommerce-website/Eticaret.Data/Eticaret.Data.csproj",
   "expectedPackageFiles": [
     "/Users/iremdinc/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/iremdinc/.nuget/packages/microsoft.bcl.asyncinterfaces/6.0.0/microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",

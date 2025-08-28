@@ -41,3 +41,18 @@
 /Users/iremdinc/Desktop/Eticaret /Eticaret.Core/obj/Debug/net8.0/Eticaret.Core.genruntimeconfig.cache
 /Users/iremdinc/Desktop/Eticaret /Eticaret.Core/obj/Debug/net8.0/ref/Eticaret.Core.dll
 /Users/iremdinc/Desktop/Eticaret /Eticaret.Core/obj/Debug/net8.0/Eticaret.Core.sourcelink.json
+/Users/iremdinc/Desktop/Ecommerce-website/Eticaret.Core/bin/Debug/net8.0/Eticaret.Core.deps.json
+/Users/iremdinc/Desktop/Ecommerce-website/Eticaret.Core/bin/Debug/net8.0/Eticaret.Core.runtimeconfig.json
+/Users/iremdinc/Desktop/Ecommerce-website/Eticaret.Core/bin/Debug/net8.0/Eticaret.Core.dll
+/Users/iremdinc/Desktop/Ecommerce-website/Eticaret.Core/bin/Debug/net8.0/Eticaret.Core.pdb
+/Users/iremdinc/Desktop/Ecommerce-website/Eticaret.Core/obj/Debug/net8.0/Eticaret.Core.csproj.AssemblyReference.cache
+/Users/iremdinc/Desktop/Ecommerce-website/Eticaret.Core/obj/Debug/net8.0/Eticaret.Core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/iremdinc/Desktop/Ecommerce-website/Eticaret.Core/obj/Debug/net8.0/Eticaret.Core.AssemblyInfoInputs.cache
+/Users/iremdinc/Desktop/Ecommerce-website/Eticaret.Core/obj/Debug/net8.0/Eticaret.Core.AssemblyInfo.cs
+/Users/iremdinc/Desktop/Ecommerce-website/Eticaret.Core/obj/Debug/net8.0/Eticaret.Core.csproj.CoreCompileInputs.cache
+/Users/iremdinc/Desktop/Ecommerce-website/Eticaret.Core/obj/Debug/net8.0/Eticaret.Core.sourcelink.json
+/Users/iremdinc/Desktop/Ecommerce-website/Eticaret.Core/obj/Debug/net8.0/Eticaret.Core.dll
+/Users/iremdinc/Desktop/Ecommerce-website/Eticaret.Core/obj/Debug/net8.0/refint/Eticaret.Core.dll
+/Users/iremdinc/Desktop/Ecommerce-website/Eticaret.Core/obj/Debug/net8.0/Eticaret.Core.pdb
+/Users/iremdinc/Desktop/Ecommerce-website/Eticaret.Core/obj/Debug/net8.0/Eticaret.Core.genruntimeconfig.cache
+/Users/iremdinc/Desktop/Ecommerce-website/Eticaret.Core/obj/Debug/net8.0/ref/Eticaret.Core.dll

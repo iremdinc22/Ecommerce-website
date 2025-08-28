@@ -4401,11 +4401,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/iremdinc/Desktop/Eticaret /Eticaret.Service/Eticaret.Service.csproj",
+      "projectUniqueName": "/Users/iremdinc/Desktop/Ecommerce-website/Eticaret.Service/Eticaret.Service.csproj",
       "projectName": "Eticaret.Service",
-      "projectPath": "/Users/iremdinc/Desktop/Eticaret /Eticaret.Service/Eticaret.Service.csproj",
+      "projectPath": "/Users/iremdinc/Desktop/Ecommerce-website/Eticaret.Service/Eticaret.Service.csproj",
       "packagesPath": "/Users/iremdinc/.nuget/packages/",
-      "outputPath": "/Users/iremdinc/Desktop/Eticaret /Eticaret.Service/obj/",
+      "outputPath": "/Users/iremdinc/Desktop/Ecommerce-website/Eticaret.Service/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/iremdinc/.nuget/NuGet/NuGet.Config"
@@ -4420,8 +4420,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/Users/iremdinc/Desktop/Eticaret /Eticaret.Data/Eticaret.Data.csproj": {
-              "projectPath": "/Users/iremdinc/Desktop/Eticaret /Eticaret.Data/Eticaret.Data.csproj"
+            "/Users/iremdinc/Desktop/Ecommerce-website/Eticaret.Data/Eticaret.Data.csproj": {
+              "projectPath": "/Users/iremdinc/Desktop/Ecommerce-website/Eticaret.Data/Eticaret.Data.csproj"
             }
           }
         }
