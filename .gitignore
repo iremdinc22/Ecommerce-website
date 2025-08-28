@@ -13,3 +13,8 @@ obj/
 *.user
 *.suo
 *.log
+
+# SQLite
+*.db
+!Eticaret.Data/VscodeEticaret.Db
+
